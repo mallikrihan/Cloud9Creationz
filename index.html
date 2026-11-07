@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud9Creationz — Luxury Handmade Crafts &amp; Personalized Gifts | Punjab</title>
+  <meta name="description"
+    content="Handcrafted with love from Punjab. Personalized gift hampers, custom hand embroidery, bespoke printed T-shirts, and thoughtful handmade creations." />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cloud9Creationz — Luxury Handmade Crafts &amp; Personalized Gifts" />
+  <meta property="og:description"
+    content="Handcrafted with love from Punjab. Personalized gift hampers, custom hand embroidery, bespoke printed T-shirts, and thoughtful handmade creations." />
+  <meta property="og:image" content="/assets/images/hero.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cloud9Creationz — Luxury Handmade Crafts &amp; Personalized Gifts" />
+  <meta name="twitter:description"
+    content="Handcrafted with love from Punjab. Personalized gift hampers, custom hand embroidery, bespoke printed T-shirts, and thoughtful handmade creations." />
+  <meta name="twitter:image" content="/assets/images/hero.jpg" />
+
+  <!-- Favicon & PWA Manifest -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#702C45" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/style.css" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Cloud9Creationz",
+    "image": "/assets/images/hero.jpg",
+    "description": "Handmade crafts, personalized gift hampers, Phulkari hand embroidery, and custom t-shirts.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Punjab",
+      "addressCountry": "IN"
+    },
+    "priceRange": "₹499 - ₹4999",
+    "currenciesAccepted": "INR"
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ========================================================================
+       1. FIRST-VISIT 2-SECOND ANIMATION INTRO
+       ======================================================================== -->
+  <div id="intro-overlay" role="dialog" aria-modal="true" aria-label="Welcome to Cloud9Creationz">
+    <button id="intro-skip-btn" class="intro-skip-btn" aria-label="Skip introduction animation">Skip Intro</button>
+    <div class="intro-content">
+      <svg class="intro-thread-svg" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <!-- Embroidery thread circle -->
+        <circle cx="50" cy="50" r="42" stroke="#E7D7BA" stroke-width="1.5" stroke-dasharray="3 3" />
+        <!-- Animated thread loop -->
+        <path class="thread-path"
+          d="M 50 15 C 68 15, 82 28, 82 50 C 82 72, 68 85, 50 85 C 32 85, 18 72, 18 50 C 18 28, 32 15, 50 15 Z"
+          stroke="#C98F9B" stroke-width="2.5" fill="none" stroke-linecap="round" />
+        <!-- Flower petals reveal -->
+        <path class="thread-petal" d="M 50 25 C 56 38, 56 46, 50 50 C 44 46, 44 38, 50 25" fill="#702C45" />
+        <path class="thread-petal" d="M 75 50 C 62 56, 54 56, 50 50 C 54 44, 62 44, 75 50" fill="#702C45" />
+        <path class="thread-petal" d="M 50 75 C 44 62, 44 54, 50 50 C 56 54, 56 62, 50 75" fill="#702C45" />
+        <path class="thread-petal" d="M 25 50 C 38 44, 46 44, 50 50 C 46 56, 38 56, 25 50" fill="#702C45" />
+        <circle cx="50" cy="50" r="4.5" fill="#C6A36B" />
+      </svg>
+      <h1 class="intro-title">CLOUD9CREATIONZ</h1>
+      <p class="intro-tagline">Handcrafted With Love. Made Just for You.</p>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       2. TOP ANNOUNCEMENT BAR
+       ======================================================================== -->
+  <div class="top-announcement">
+    <span>Handcrafted in Punjab with devotion · Free delivery across India on orders above ₹1,999</span>
+    <a href="#custom-gift" onclick="scrollToSection('custom-gift'); return false;">Request Custom Gift →</a>
+  </div>
+
+  <!-- ========================================================================
+       3. LIQUID-GLASS NAVIGATION BAR
+       ======================================================================== -->
+  <header class="header-glass">
+    <div class="nav-container">
+
+      <!-- Brand Lockup -->
+      <a href="#" class="brand-lockup" aria-label="Cloud9Creationz Homepage">
+        <svg class="brand-emblem" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" fill="#FFF9F2" stroke="#C6A36B" stroke-width="1.8" stroke-dasharray="2 2" />
+          <g transform="translate(32,32)">
+            <path d="M 0 -18 C 4 -10 4 -4 0 0 C -4 -4 -4 -10 0 -18" fill="#702C45" />
+            <path d="M 18 0 C 10 4 4 4 0 0 C 4 -4 10 -4 18 0" fill="#702C45" />
+            <path d="M 0 18 C -4 10 -4 4 0 0 C 4 4 4 10 0 18" fill="#702C45" />
+            <path d="M -18 0 C -10 -4 -4 -4 0 0 C -4 4 -10 4 -18 0" fill="#702C45" />
+            <circle cx="0" cy="0" r="3.2" fill="#C6A36B" />
+          </g>
+        </svg>
+        <div>
+          <div class="brand-title">CLOUD9CREATIONZ</div>
+          <div class="brand-tagline">HANDMADE CRAFTS · PUNJAB</div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#home" class="nav-link" onclick="scrollToSection('home'); return false;">Home</a>
+        <a href="#catalog" class="nav-link" onclick="scrollToSection('catalog'); return false;">Shop All</a>
+        <a href="#categories" class="nav-link" onclick="filterCategoryFromCard('hampers'); return false;">Hampers</a>
+        <a href="#categories" class="nav-link"
+          onclick="filterCategoryFromCard('embroidery'); return false;">Embroidery</a>
+        <a href="#categories" class="nav-link" onclick="filterCategoryFromCard('tshirts'); return false;">Custom
+          T-Shirts</a>
+        <a href="#story" class="nav-link" onclick="scrollToSection('story'); return false;">Our Story</a>
+        <a href="#contact" class="nav-link" onclick="scrollToSection('contact'); return false;">Contact</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Search Button -->
+        <button class="icon-btn"
+          onclick="scrollToSection('catalog'); document.getElementById('catalog-search')?.focus();"
+          aria-label="Search creations">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </button>
+
+        <!-- Design Studio Trigger -->
+        <button class="design-studio-btn" onclick="openDesignStudio()" title="Switch Design Themes"
+          aria-label="Explore Design Themes">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+            <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+            <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+            <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+            <path
+              d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2Z" />
+          </svg>
+          <span>Design Themes</span>
+        </button>
+
+        <!-- Shopping Bag Button -->
+        <button class="icon-btn" onclick="openCartDrawer()" aria-label="View shopping bag">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 0 1-8 0" />
+          </svg>
+          <span class="badge-count cart-count-badge" style="display: none;">0</span>
+        </button>
+
+        <!-- Direct WhatsApp Order CTA -->
+        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="btn-primary btn-whatsapp"
+          style="display: none;" id="nav-wa-btn" aria-label="Chat on WhatsApp">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          <span>Order via WhatsApp</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open mobile menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu-drawer" class="mobile-drawer" role="dialog" aria-modal="true">
+    <div class="mobile-drawer-content">
+      <div class="mobile-drawer-header">
+        <div class="brand-title" style="font-size: 1.35rem;">CLOUD9CREATIONZ</div>
+        <button class="modal-close-btn" onclick="closeMobileMenu()" aria-label="Close menu" style="position: static;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-drawer-links">
+        <a href="#home" class="mobile-nav-link" onclick="closeMobileMenu(); scrollToSection('home');">Home
+          <span>→</span></a>
+        <a href="#catalog" class="mobile-nav-link" onclick="closeMobileMenu(); scrollToSection('catalog');">Shop All
+          Creations <span>→</span></a>
+        <a href="#categories" class="mobile-nav-link"
+          onclick="closeMobileMenu(); filterCategoryFromCard('hampers');">Gift Hampers <span>→</span></a>
+        <a href="#categories" class="mobile-nav-link"
+          onclick="closeMobileMenu(); filterCategoryFromCard('embroidery');">Hand Embroidery <span>→</span></a>
+        <a href="#categories" class="mobile-nav-link"
+          onclick="closeMobileMenu(); filterCategoryFromCard('tshirts');">Custom T-Shirts <span>→</span></a>
+        <a href="#categories" class="mobile-nav-link"
+          onclick="closeMobileMenu(); filterCategoryFromCard('gifts');">Personalized Gifts <span>→</span></a>
+        <a href="#story" class="mobile-nav-link" onclick="closeMobileMenu(); scrollToSection('story');">Our Story
+          <span>→</span></a>
+        <a href="#custom-gift" class="mobile-nav-link"
+          onclick="closeMobileMenu(); scrollToSection('custom-gift');">Request Custom Gift <span>→</span></a>
+        <a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu(); scrollToSection('contact');">Contact
+          &amp; FAQ <span>→</span></a>
+        <a href="javascript:void(0)" class="mobile-nav-link" onclick="closeMobileMenu(); openDesignStudio();"
+          style="color: var(--color-burgundy); font-weight: 700;">🎨 Switch Design Theme <span>✦</span></a>
+      </div>
+      <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.75rem;">
+        <button class="btn-primary btn-whatsapp" onclick="window.open('https://wa.me/919876543210', '_blank');"
+          style="width: 100%;">
+          Chat on WhatsApp
+        </button>
+        <div style="font-size: 0.75rem; text-align: center; color: var(--color-muted);">
+          Punjab, India · Worldwide Inquiries
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========================================================================
+         4. HERO SECTION
+         ======================================================================== -->
+    <section id="home" class="hero-section">
+      <div class="hero-grid">
+
+        <div class="hero-content">
+          <div class="hero-badge">
+            <svg class="hero-badge-needle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="6" cy="6" r="3" />
+              <path d="M8.5 8.5 21 21" />
+            </svg>
+            <span>Artisanal Punjabi Craftsmanship &amp; Gifting</span>
+          </div>
+
+          <h1 class="hero-title">
+            Little Details. <em>Handmade With Heart.</em>
+          </h1>
+
+          <p class="hero-description">
+            Discover bespoke personalized gift hampers, heirloom hand embroidery, and thoughtful custom-printed
+            creations handcrafted with devotion in Punjab.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#catalog" class="btn-primary" onclick="scrollToSection('catalog'); return false;">
+              Explore Collection
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+            <a href="#custom-gift" class="btn-secondary" onclick="scrollToSection('custom-gift'); return false;">
+              Create Your Own Gift
+            </a>
+          </div>
+
+          <div class="hero-trust-strip">
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              <span>100% Handcrafted</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+              <span>Custom Personalization</span>
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <rect x="1" y="3" width="15" height="13" />
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                <circle cx="5.5" cy="18.5" r="2.5" />
+                <circle cx="18.5" cy="18.5" r="2.5" />
+              </svg>
+              <span>All-India Delivery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Media Showcase -->
+        <div class="hero-media-card">
+          <img src="/assets/images/hero.jpg"
+            alt="Artisanal hand embroidery and luxury gift hamper in Cloud9Creationz studio" />
+          <div class="hero-floating-glass-tag">
+            <div>
+              <div class="tag-brand">Cloud9Creationz Atelier</div>
+              <div class="tag-sub">Hand-Stitched &amp; Keepsakes</div>
+            </div>
+            <a href="#catalog" class="btn-outline" style="font-size: 0.75rem; padding: 0.35rem 0.85rem;"
+              onclick="scrollToSection('catalog'); return false;">
+              Browse →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. SIX PRODUCT CATEGORIES
+         ======================================================================== -->
+    <section id="categories" class="section-wrapper">
+      <div class="section-header">
+        <span class="section-kicker">Curated Collections</span>
+        <h2 class="section-title">Designed with Love, Crafted by Hand</h2>
+        <div class="phulkari-divider">
+          <div class="phulkari-diamond"></div>
+        </div>
+        <p class="section-subtitle">
+          Every category reflects our dedication to heirloom craftsmanship, organic textures, and thoughtful modern
+          gifting.
+        </p>
+      </div>
+
+      <div class="category-grid">
+
+        <!-- Category 1: Personalized Gift Hampers -->
+        <div class="category-card" onclick="filterCategoryFromCard('hampers')">
+          <div class="category-img-box">
+            <img src="/assets/images/hamper.jpg" alt="Personalized Gift Hampers" loading="lazy" />
+            <div class="category-overlay"></div>
+          </div>
+          <div class="category-info">
+            <h3 class="category-name">Personalized Gift Hampers</h3>
+            <p class="category-desc">Curated keepsake boxes filled with handcrafted candles, personalized plaques,
+              artisan herbal teas, and satin bows.</p>
+            <span class="category-action-link">Explore Hampers <span>→</span></span>
+          </div>
+        </div>
+
+        <!-- Category 2: Hand Embroidery -->
+        <div class="category-card" onclick="filterCategoryFromCard('embroidery')">
+          <div class="category-img-box">
+            <img src="/assets/images/embroidery.jpg" alt="Hand Embroidery Hoops" loading="lazy" />
+            <div class="category-overlay"></div>
+          </div>
+          <div class="category-info">
+            <h3 class="category-name">Hand Embroidery</h3>
+            <p class="category-desc">Bespoke wooden embroidery hoops with fine Phulkari geometric stitching, wild
+              botanical motifs, names, and wedding dates.</p>
+            <span class="category-action-link">Explore Embroidery <span>→</span></span>
+          </div>
+        </div>
+
+        <!-- Category 3: Custom T-Shirts -->
+        <div class="category-card" onclick="filterCategoryFromCard('tshirts')">
+          <div class="category-img-box">
+            <img src="/assets/images/tshirt.jpg" alt="Custom Embroidered &amp; Printed T-Shirts" loading="lazy" />
+            <div class="category-overlay"></div>
+          </div>
+          <div class="category-info">
+            <h3 class="category-name">Custom T-Shirts</h3>
+            <p class="category-desc">240 GSM organic heavy cotton tees with subtle hand-stitched monograms, floral chest
+              designs, and matching couple duos.</p>
+            <span class="category-action-link">Explore T-Shirts <span>→</span></span>
+          </div>
+        </div>
+
+        <!-- Category 4: Personalized Gifts -->
+        <div class="category-card" onclick="filterCategoryFromCard('gifts')">
+          <div class="category-img-box">
+            <img src="/assets/images/giftbox.jpg" alt="Personalized Keepsake Gifts" loading="lazy" />
+            <div class="category-overlay"></div>
+          </div>
+          <div class="category-info">
+            <h3 class="category-name">Personalized Gifts</h3>
+            <p class="category-desc">Custom engraved pine wood boxes, wax-sealed scrolls, and customized memorabilia to
+              cherish life's milestones.</p>
+            <span class="category-action-link">Explore Gifts <span>→</span></span>
+          </div>
+        </div>
+
+        <!-- Category 5: Handmade Accessories -->
+        <div class="category-card" onclick="filterCategoryFromCard('accessories')">
+          <div class="category-img-box">
+            <img src="/assets/images/accessories.jpg" alt="Handmade Accessories" loading="lazy" />
+            <div class="category-overlay"></div>
+          </div>
+          <div class="category-info">
+            <h3 class="category-name">Handmade Accessories</h3>
+            <p class="category-desc">Hand-stitched linen tote bags, silk tassel bookmarks, fabric scrunchies, and
+              heirloom cloth accessories.</p>
+            <span class="category-action-link">Explore Accessories <span>→</span></span>
+          </div>
+        </div>
+
+        <!-- Category 6: Special Occasion Gifts -->
+        <div class="category-card" onclick="filterCategoryFromCard('occasions')">
+          <div class="category-img-box">
+            <img src="/assets/images/hamper.jpg" alt="Special Occasion Gifts" loading="lazy" />
+            <div class="category-overlay"></div>
+          </div>
+          <div class="category-info">
+            <h3 class="category-name">Special Occasion Gifts</h3>
+            <p class="category-desc">Luxurious celebration ensembles crafted for weddings, anniversaries, baby arrivals,
+              and cultural festivities.</p>
+            <span class="category-action-link">Explore Occasions <span>→</span></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. PRODUCT CATALOG SECTION (Interactive Filter, Search, Sort)
+         ======================================================================== -->
+    <section id="catalog" class="section-wrapper" style="padding-top: 1rem;">
+      <div class="section-header">
+        <span class="section-kicker">Handmade Store</span>
+        <h2 class="section-title">Explore Our Creations</h2>
+        <div class="phulkari-divider">
+          <div class="phulkari-diamond"></div>
+        </div>
+        <p class="section-subtitle">
+          Select any piece to customize thread colors, add engraved names, or select sizes before ordering.
+        </p>
+      </div>
+
+      <!-- Toolbar: Search, Category Tabs, Sort -->
+      <div class="catalog-toolbar">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input type="text" id="catalog-search" class="search-input"
+            placeholder="Search by name, motif, or craft..." />
+        </div>
+
+        <div class="filter-tabs" role="tablist">
+          <button class="filter-tab active" data-filter="all" role="tab">All Creations</button>
+          <button class="filter-tab" data-filter="hampers" role="tab">Hampers</button>
+          <button class="filter-tab" data-filter="embroidery" role="tab">Embroidery</button>
+          <button class="filter-tab" data-filter="tshirts" role="tab">T-Shirts</button>
+          <button class="filter-tab" data-filter="gifts" role="tab">Personalized Gifts</button>
+          <button class="filter-tab" data-filter="accessories" role="tab">Accessories</button>
+          <button class="filter-tab" data-filter="occasions" role="tab">Occasions</button>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <select id="catalog-sort" class="sort-select" aria-label="Sort creations">
+            <option value="featured">Sort: Featured</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="name-asc">Name: A to Z</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="catalog-count"
+        style="font-size: 0.8125rem; color: var(--color-muted); margin-bottom: 1.5rem; text-align: right;"></div>
+
+      <!-- Products Grid -->
+      <div id="product-grid" class="product-grid">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         7. ABOUT CLOUD9CREATIONZ ("Our Story")
+         ======================================================================== -->
+    <section id="story" class="story-section section-wrapper">
+      <div class="story-grid">
+
+        <div class="story-portrait-container">
+          <div class="story-portrait-frame">
+            <img src="/assets/images/artisan.jpg" alt="Cloud9Creationz artisan in her studio in Punjab"
+              loading="lazy" />
+          </div>
+          <div class="story-floating-badge">
+            <div class="story-badge-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z" />
+              </svg>
+            </div>
+            <div>
+              <strong style="font-size: 0.875rem; color: var(--color-charcoal); display: block;">Self-Made
+                Craftsperson</strong>
+              <span style="font-size: 0.75rem; color: var(--color-burgundy);">Rooted in Punjab, India</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-content">
+          <span class="section-kicker">Our Heritage &amp; Craft</span>
+          <h2>Made by Hand. Created With Heart.</h2>
+          <div class="phulkari-divider" style="margin-left: 0;">
+            <div class="phulkari-diamond"></div>
+          </div>
+
+          <p>
+            Cloud9Creationz is a creative handmade craft atelier from Punjab, India, bringing personal warmth to
+            gifting, hand embroidery, and custom-designed apparel.
+          </p>
+          <p>
+            Every piece is created by hand — celebrating the geometry and vibrant soul of traditional Punjabi Phulkari
+            needlework, refined with modern minimalist aesthetics and uncompromised quality.
+          </p>
+          <p>
+            From selecting natural unbleached linens and rich silk threads to laser-engraving personalized wooden
+            keepsake boxes, every single creation is an opportunity to make an ordinary moment feel deeply cherished.
+          </p>
+
+          <div class="story-pillars">
+            <div class="pillar-item">
+              <h4>Heirloom Artistry</h4>
+              <p>Authentic Phulkari-inspired embroidery techniques honoring Punjabi textile traditions.</p>
+            </div>
+            <div class="pillar-item">
+              <h4>Bespoke Personalization</h4>
+              <p>Every name, date, and gift note is customized with deliberate thought and care.</p>
+            </div>
+            <div class="pillar-item">
+              <h4>Natural Organic Fibers</h4>
+              <p>Combed organic cotton, natural linen canvas, and premium silk embroidery skeins.</p>
+            </div>
+            <div class="pillar-item">
+              <h4>Direct Artisan Touch</h4>
+              <p>Direct communication with Cloud9Creationz ensures your vision comes alive exactly as imagined.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         8. SPECIAL CUSTOM CREATION SECTION ("Have Something Special in Mind?")
+         ======================================================================== -->
+    <section id="custom-gift" class="section-wrapper">
+      <div class="section-header">
+        <span class="section-kicker">Bespoke Orders</span>
+        <h2 class="section-title">Have Something Special in Mind?</h2>
+        <div class="phulkari-divider">
+          <div class="phulkari-diamond"></div>
+        </div>
+        <p class="section-subtitle">
+          Tell us your idea, choose your colors, and let us help create something truly personal for your birthday,
+          wedding, anniversary, or corporate celebration.
+        </p>
+      </div>
+
+      <div class="custom-request-box">
+        <form id="custom-inquiry-form">
+          <div class="form-grid-2">
+
+            <div class="form-group">
+              <label class="form-label" for="custom-name">Your Full Name *</label>
+              <input type="text" id="custom-name" class="form-input" placeholder="e.g. Jaspreet Kaur" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="custom-phone">WhatsApp / Phone Number *</label>
+              <input type="tel" id="custom-phone" class="form-input" placeholder="e.g. 9876543210" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="custom-type">Type of Creation</label>
+              <select id="custom-type" class="form-select">
+                <option value="Personalized Gift Hamper">Personalized Gift Hamper</option>
+                <option value="Hand-Embroidered Floral/Name Hoop">Hand-Embroidered Floral/Name Hoop</option>
+                <option value="Custom Embroidered T-Shirt">Custom Embroidered T-Shirt</option>
+                <option value="Personalized Keepsake Box">Personalized Keepsake Box</option>
+                <option value="Wedding / Festive Celebration Ensemble">Wedding / Festive Celebration Ensemble</option>
+                <option value="Bulk / Corporate Gifting">Bulk / Corporate Gifting</option>
+                <option value="Other Bespoke Craft">Other Bespoke Craft</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="custom-occasion">Occasion</label>
+              <select id="custom-occasion" class="form-select">
+                <option value="Birthday">Birthday</option>
+                <option value="Wedding / Anniversary">Wedding / Anniversary</option>
+                <option value="Baby Shower / Welcome Baby">Baby Shower / Welcome Baby</option>
+                <option value="Housewarming">Housewarming</option>
+                <option value="Festival / Celebration">Festival / Celebration</option>
+                <option value="Personal Keepsake">Personal Keepsake</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="custom-budget">Estimated Budget Range <span
+                  class="optional">(Optional)</span></label>
+              <select id="custom-budget" class="form-select">
+                <option value="Under ₹1,500">Under ₹1,500</option>
+                <option value="₹1,500 - ₹3,000">₹1,500 - ₹3,000</option>
+                <option value="₹3,000 - ₹6,000">₹3,000 - ₹6,000</option>
+                <option value="Above ₹6,000">Above ₹6,000 (Luxury / Bulk)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="custom-date">Needed By Date <span
+                  class="optional">(Optional)</span></label>
+              <input type="date" id="custom-date" class="form-input" />
+            </div>
+
+          </div>
+
+          <div class="form-group" style="margin-top: 1.25rem;">
+            <label class="form-label" for="custom-colors">Preferred Colors or Aesthetic Theme <span
+                class="optional">(Optional)</span></label>
+            <input type="text" id="custom-colors" class="form-input"
+              placeholder="e.g. Burgundy &amp; Gold, Pastel Blush, Earthy Raw Linen" />
+          </div>
+
+          <div class="form-group" style="margin-top: 1.25rem;">
+            <label class="form-label" for="custom-desc">Design Description &amp; Personalization Details *</label>
+            <textarea id="custom-desc" class="form-textarea" rows="4"
+              placeholder="Describe what you would like: custom names, quotes, thread details, hamper elements, or themes..."
+              required></textarea>
+            <span class="form-help-text">
+              Note: You can easily share reference photos or sketches directly on WhatsApp once your inquiry draft
+              opens.
+            </span>
+          </div>
+
+          <div style="margin-top: 2rem; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+            <button type="submit" class="btn-primary btn-whatsapp"
+              style="padding: 0.85rem 2rem; font-size: 1rem; width: min(100%, 340px);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              Send Request via WhatsApp
+            </button>
+            <span style="font-size: 0.8125rem; color: var(--color-muted); text-align: center;">
+              Final price confirmed after design review. We reply within a few hours.
+            </span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         9. INSTAGRAM & STUDIO GALLERY
+         ======================================================================== -->
+    <section class="section-wrapper" style="padding-top: 1rem;">
+      <div class="section-header">
+        <span class="section-kicker">From The Atelier</span>
+        <h2 class="section-title">Moments &amp; Masterpieces</h2>
+        <div class="phulkari-divider">
+          <div class="phulkari-diamond"></div>
+        </div>
+        <p class="section-subtitle">
+          A glimpse into finished custom embroidery hoops, curated hampers, and works in progress.
+        </p>
+      </div>
+
+      <div class="instagram-grid">
+        <a href="https://instagram.com/cloud9creationz" target="_blank" rel="noopener noreferrer" class="insta-card">
+          <img src="/assets/images/embroidery.jpg" alt="Artisanal Phulkari embroidery hoop" loading="lazy" />
+          <div class="insta-overlay">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+            <span class="insta-caption">Heirloom Phulkari Stitching</span>
+          </div>
+        </a>
+
+        <a href="https://instagram.com/cloud9creationz" target="_blank" rel="noopener noreferrer" class="insta-card">
+          <img src="/assets/images/hamper.jpg" alt="Curated celebration gift hamper" loading="lazy" />
+          <div class="insta-overlay">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+            <span class="insta-caption">Celebration Keepsake Hampers</span>
+          </div>
+        </a>
+
+        <a href="https://instagram.com/cloud9creationz" target="_blank" rel="noopener noreferrer" class="insta-card">
+          <img src="/assets/images/tshirt.jpg" alt="Embroidered organic cotton t-shirts" loading="lazy" />
+          <div class="insta-overlay">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+            <span class="insta-caption">Custom Monogram Tees</span>
+          </div>
+        </a>
+
+        <a href="https://instagram.com/cloud9creationz" target="_blank" rel="noopener noreferrer" class="insta-card">
+          <img src="/assets/images/giftbox.jpg" alt="Personalized wooden keepsake memory box" loading="lazy" />
+          <div class="insta-overlay">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+            <span class="insta-caption">Laser Engraved Wood Boxes</span>
+          </div>
+        </a>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="https://instagram.com/cloud9creationz" target="_blank" rel="noopener noreferrer" class="btn-outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+          </svg>
+          Follow @cloud9creationz on Instagram
+        </a>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         10. FAQ ACCORDION SECTION
+         ======================================================================== -->
+    <section id="faq" class="section-wrapper">
+      <div class="section-header">
+        <span class="section-kicker">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="phulkari-divider">
+          <div class="phulkari-diamond"></div>
+        </div>
+      </div>
+
+      <div class="faq-container">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do I place an order on this website?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            You can either add products to your shopping bag and proceed to our order checkout (which connects via
+            WhatsApp or Google Forms), or click "Order via WhatsApp" on any product to chat directly with
+            Cloud9Creationz.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I customize names, colors, and dates?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Yes, personalization is the heart of what we do! You can specify your desired names, initials, dates, and
+            color themes in the customization box when selecting any product or in the custom request form.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do I select the right T-shirt size?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Our t-shirts are made from 240 GSM heavy combed organic cotton with a comfortable unisex relaxed fit.
+            Standard sizes range from XS to XXL. If you are unsure between two sizes, we recommend sizing up for a
+            relaxed fit, or messaging us on WhatsApp for exact chest measurements.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How long does handmade production take?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Because each piece is hand-stitched, embroidery hoops take 4–6 business days, gift hampers take 2–4 days,
+            and t-shirts take 3–5 days. If you have an urgent date (like an upcoming anniversary or birthday), please
+            let us know in advance and we will do our best to accommodate your rush request.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does payment work?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Once you submit your order, Cloud9Creationz will verify your customization details, confirm the dispatch
+            schedule, and share genuine business UPI QR code and payment details. We never ask for sensitive banking
+            credentials or PINs.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do you ship outside of Punjab across India?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            Yes! We deliver across all states and PIN codes in India through trusted express courier partners. Free
+            shipping is provided on orders over ₹1,999.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Payment Assurance Note -->
+      <div class="payment-info-box">
+        <div class="payment-qr-placeholder">
+          <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#702C45" stroke-width="1.8">
+            <rect x="3" y="3" width="7" height="7" />
+            <rect x="14" y="3" width="7" height="7" />
+            <rect x="14" y="14" width="7" height="7" />
+            <rect x="3" y="14" width="7" height="7" />
+            <line x1="7" y1="7" x2="7.01" y2="7" />
+            <line x1="17" y1="7" x2="17.01" y2="7" />
+            <line x1="7" y1="17" x2="7.01" y2="17" />
+            <line x1="17" y1="17" x2="17.01" y2="17" />
+          </svg>
+          <span style="font-size: 0.65rem; color: var(--color-burgundy); font-weight: 600; margin-top: 0.25rem;">UPI
+            VERIFIED</span>
+        </div>
+        <div class="payment-details">
+          <strong>Transparent &amp; Secure Payment Policy</strong>
+          <span>Orders and customized proofs are reviewed personally by Cloud9Creationz before payment instructions are
+            shared via WhatsApp or Email. We support UPI QR payment, Google Pay, PhonePe, and Net Banking.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         11. CONTACT SECTION
+         ======================================================================== -->
+    <section id="contact" class="section-wrapper" style="padding-top: 1rem;">
+      <div class="section-header">
+        <span class="section-kicker">Get in Touch</span>
+        <h2 class="section-title">We’d Love to Hear From You</h2>
+        <div class="phulkari-divider">
+          <div class="phulkari-diamond"></div>
+        </div>
+        <p class="section-subtitle">
+          Have an inquiry regarding custom hampers, bulk corporate gifting, or hand embroidery designs? Reach out
+          directly.
+        </p>
+      </div>
+
+      <div
+        style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; max-width: 800px; margin: 0 auto;">
+
+        <div class="glass-card"
+          style="flex: 1 1 240px; padding: 2rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+          <div
+            style="width: 48px; height: 48px; border-radius: 50%; background: rgba(37, 211, 102, 0.15); color: #1DA851; display: flex; align-items: center; justify-content: center;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+          </div>
+          <h3 style="font-size: 1.25rem;">WhatsApp Chat</h3>
+          <p style="font-size: 0.85rem; color: var(--color-muted);">Fastest response for design consultations and custom
+            order updates.</p>
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer"
+            class="btn-primary btn-whatsapp" style="margin-top: 0.5rem; font-size: 0.8125rem;">
+            Chat on WhatsApp
+          </a>
+        </div>
+
+        <div class="glass-card"
+          style="flex: 1 1 240px; padding: 2rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+          <div
+            style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-blush); color: var(--color-burgundy); display: flex; align-items: center; justify-content: center;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </div>
+          <h3 style="font-size: 1.25rem;">Email Inquiries</h3>
+          <p style="font-size: 0.85rem; color: var(--color-muted);">Send bulk orders, corporate gifting requirements, or
+            detailed briefs.</p>
+          <button class="btn-primary" onclick="sendDirectEmailInquiry()"
+            style="margin-top: 0.5rem; font-size: 0.8125rem;">
+            Send Email Message
+          </button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       12. SITE FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-brand">
+        <h3>CLOUD9CREATIONZ</h3>
+        <p>
+          Handcrafted with love from Punjab, India. Celebrating heirloom Phulkari traditions, bespoke personalized gift
+          hampers, and custom embroidery.
+        </p>
+        <div class="footer-social-row">
+          <a href="https://instagram.com/cloud9creationz" target="_blank" rel="noopener noreferrer"
+            class="footer-social-btn" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+          </a>
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="footer-social-btn"
+            aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+          </a>
+          <button class="footer-social-btn" onclick="sendDirectEmailInquiry()" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Creations</h4>
+        <ul class="footer-links">
+          <li><a href="#categories" class="footer-link" onclick="filterCategoryFromCard('hampers')">Gift Hampers</a>
+          </li>
+          <li><a href="#categories" class="footer-link" onclick="filterCategoryFromCard('embroidery')">Hand
+              Embroidery</a></li>
+          <li><a href="#categories" class="footer-link" onclick="filterCategoryFromCard('tshirts')">Custom T-Shirts</a>
+          </li>
+          <li><a href="#categories" class="footer-link" onclick="filterCategoryFromCard('gifts')">Personalized Gifts</a>
+          </li>
+          <li><a href="#categories" class="footer-link" onclick="filterCategoryFromCard('accessories')">Handmade
+              Accessories</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#home" class="footer-link" onclick="scrollToSection('home')">Home</a></li>
+          <li><a href="#catalog" class="footer-link" onclick="scrollToSection('catalog')">Shop All</a></li>
+          <li><a href="#story" class="footer-link" onclick="scrollToSection('story')">Our Story</a></li>
+          <li><a href="#custom-gift" class="footer-link" onclick="scrollToSection('custom-gift')">Custom Creations</a>
+          </li>
+          <li><a href="#faq" class="footer-link" onclick="scrollToSection('faq')">FAQ</a></li>
+          <li><a href="#contact" class="footer-link" onclick="scrollToSection('contact')">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <ul class="footer-links">
+          <li><a href="javascript:void(0)" class="footer-link" onclick="openPolicyModal('shipping')">Shipping
+              Information</a></li>
+          <li><a href="javascript:void(0)" class="footer-link" onclick="openPolicyModal('returns')">Returns &amp;
+              Cancellation</a></li>
+          <li><a href="javascript:void(0)" class="footer-link" onclick="openPolicyModal('privacy')">Privacy Policy</a>
+          </li>
+          <li><a href="javascript:void(0)" class="footer-link" onclick="openPolicyModal('terms')">Terms &amp;
+              Conditions</a></li>
+        </ul>
+        <div style="margin-top: 1.25rem; font-size: 0.8125rem; color: #B3A8AC;">
+          Handmade Atelier: Punjab, India.<br />Direct customer care via WhatsApp.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        &copy; <span id="footer-year">2026</span> Cloud9Creationz. All Rights Reserved. Handcrafted With Heart.
+      </div>
+      <div class="footer-bottom-links">
+        <a href="javascript:void(0)" onclick="openPolicyModal('privacy')">Privacy</a>
+        <a href="javascript:void(0)" onclick="openPolicyModal('terms')">Terms</a>
+        <a href="javascript:void(0)" onclick="openPolicyModal('shipping')">Shipping</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       13. SHOPPING BAG SLIDE-OVER DRAWER
+       ======================================================================== -->
+  <div id="cart-drawer" class="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping Bag">
+    <div class="cart-drawer-panel">
+      <div class="cart-header">
+        <h3>Shopping Bag</h3>
+        <button class="modal-close-btn" onclick="closeCartDrawer()" aria-label="Close bag" style="position: static;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="cart-drawer-items" class="cart-items-list">
+        <!-- Rendered by script.js -->
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-subtotal-row">
+          <span>Subtotal</span>
+          <strong id="cart-drawer-subtotal" class="tabular-nums">₹0</strong>
+        </div>
+        <div style="font-size: 0.75rem; color: var(--color-muted);">
+          Free shipping on orders above ₹1,999. Taxes included.
+        </div>
+        <button id="cart-checkout-btn" class="btn-primary" onclick="openOrderModal()"
+          style="width: 100%; padding: 0.85rem;">
+          Proceed to Order
+        </button>
+        <button id="cart-clear-btn" class="btn-outline" onclick="clearCart()" style="width: 100%; font-size: 0.75rem;">
+          Clear Shopping Bag
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       14. PRODUCT DETAIL & CUSTOMIZATION MODAL
+       ======================================================================== -->
+  <div id="product-modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Product Details">
+    <div id="product-modal-container" class="modal-window">
+      <!-- Injected by script.js -->
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       15. CHECKOUT & ORDER SUBMISSION MODAL (Google Forms & WhatsApp)
+       ======================================================================== -->
+  <div id="order-modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Place Order">
+    <div class="modal-window" style="max-width: 720px; padding: 2rem;">
+      <button class="modal-close-btn" onclick="closeOrderModal()" aria-label="Close checkout">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+
+      <div id="order-form-container">
+        <div style="margin-bottom: 1.5rem;">
+          <span class="section-kicker">Review &amp; Submit</span>
+          <h2 style="font-size: 1.75rem; color: var(--color-charcoal); margin-bottom: 0.35rem;">Place Your Handmade
+            Order</h2>
+          <p style="font-size: 0.875rem; color: var(--color-muted);">
+            Provide your delivery details. You can submit directly via WhatsApp or through our Google Forms order
+            system.
+          </p>
+        </div>
+
+        <!-- Order Summary Box -->
+        <div
+          style="background: var(--color-ivory); border-radius: var(--radius-md); padding: 1.25rem; border: 1px solid var(--color-border); margin-bottom: 1.5rem;">
+          <strong
+            style="font-size: 0.875rem; color: var(--color-burgundy); display: block; margin-bottom: 0.75rem;">Selected
+            Items:</strong>
+          <div id="order-summary-box">
+            <!-- Rendered by JS -->
+          </div>
+          <div
+            style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--color-border);">
+            <span style="font-size: 0.85rem; color: var(--color-muted);">Estimated Delivery Fee:</span>
+            <span id="order-shipping-charge" style="font-weight: 600; font-size: 0.9rem;">₹0</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 0.35rem;">
+            <strong style="font-size: 1.1rem; color: var(--color-charcoal);">Estimated Order Total:</strong>
+            <strong id="order-final-total" class="tabular-nums"
+              style="font-size: 1.35rem; color: var(--color-burgundy);">₹0</strong>
+          </div>
+        </div>
+
+        <!-- Customer & Delivery Address Form -->
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label" for="order-name">Full Name *</label>
+            <input type="text" id="order-name" class="form-input" placeholder="e.g. Jaspreet Kaur" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="order-phone">Phone / WhatsApp Number *</label>
+            <input type="tel" id="order-phone" class="form-input" placeholder="e.g. 9876543210" required />
+          </div>
+
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <label class="form-label" for="order-email">Email Address <span class="optional">(Optional)</span></label>
+            <input type="email" id="order-email" class="form-input" placeholder="name@example.com" />
+          </div>
+
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <label class="form-label" for="order-street">House No. &amp; Street Address *</label>
+            <input type="text" id="order-street" class="form-input" placeholder="House #, Building, Street" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="order-locality">Area / Locality</label>
+            <input type="text" id="order-locality" class="form-input" placeholder="e.g. Model Town" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="order-city">City *</label>
+            <input type="text" id="order-city" class="form-input" placeholder="e.g. Amritsar" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="order-state">State *</label>
+            <input type="text" id="order-state" class="form-input" placeholder="e.g. Punjab" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="order-pincode">PIN Code *</label>
+            <input type="text" id="order-pincode" class="form-input" placeholder="e.g. 143001" maxlength="6" required />
+          </div>
+
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <label class="form-label" for="order-preferred-date">Preferred Delivery Date <span
+                class="optional">(Optional)</span></label>
+            <input type="date" id="order-preferred-date" class="form-input" />
+          </div>
+
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <label class="form-label" for="order-notes">Special Instructions / Gift Card Message <span
+                class="optional">(Optional)</span></label>
+            <textarea id="order-notes" class="form-textarea" rows="2"
+              placeholder="Any gift notes, packing requests, or delivery instructions..."></textarea>
+          </div>
+        </div>
+
+        <!-- Submission Options -->
+        <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 0.85rem;">
+          <button type="button" class="btn-primary btn-whatsapp" onclick="submitOrderViaWhatsApp()"
+            style="width: 100%; padding: 0.9rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            Complete Order via WhatsApp (Recommended)
+          </button>
+
+          <button type="button" class="btn-secondary" onclick="submitOrderViaGoogleForm()"
+            style="width: 100%; padding: 0.85rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
+            Submit via Google Form (Spreadsheet Synced)
+          </button>
+        </div>
+
+        <div style="font-size: 0.75rem; color: var(--color-muted); text-align: center; margin-top: 1rem;">
+          No payment is charged right now. Cloud9Creationz confirms each order and reviews custom designs individually.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       16. POLICY MODAL (Shipping, Returns, Privacy, Terms)
+       ======================================================================== -->
+  <div id="policy-modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-window" style="max-width: 650px; padding: 2.25rem;">
+      <button class="modal-close-btn" onclick="closePolicyModal()" aria-label="Close modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <h3 id="policy-modal-title" style="font-size: 1.5rem; margin-bottom: 1.25rem; color: var(--color-burgundy);"></h3>
+      <div id="policy-modal-body" style="font-size: 0.95rem; color: var(--color-charcoal-light); line-height: 1.7;">
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       17. COMPACT MOBILE BOTTOM TAB BAR
+       ======================================================================== -->
+  <nav class="mobile-bottom-bar" aria-label="Mobile Navigation">
+    <a href="#home" class="bottom-tab" onclick="scrollToSection('home'); return false;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+        <polyline points="9 22 9 12 15 12 15 22" />
+      </svg>
+      <span>Home</span>
+    </a>
+    <a href="#catalog" class="bottom-tab" onclick="scrollToSection('catalog'); return false;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+      <span>Shop</span>
+    </a>
+    <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="bottom-tab"
+      style="color: #25D366;">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+    <button class="bottom-tab" onclick="openCartDrawer()" aria-label="Open Shopping Bag">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <path d="M16 10a4 4 0 0 1-8 0" />
+      </svg>
+      <span>Bag</span>
+      <span class="badge-count cart-count-badge" style="display: none; top: -1px; right: 8px;">0</span>
+    </button>
+  </nav>
+
+  <!-- ========================================================================
+       18. DESIGN STUDIO THEMES MODAL
+       ======================================================================== -->
+  <div id="design-studio-modal" class="modal-backdrop" role="dialog" aria-modal="true"
+    aria-label="Design Aesthetics Studio">
+    <div class="modal-window" style="max-width: 820px; padding: 2.25rem;">
+      <button class="modal-close-btn" onclick="closeDesignStudio()" aria-label="Close dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+
+      <div>
+        <span class="section-kicker">Visual Design Studio</span>
+        <h2 style="font-size: 1.85rem; color: var(--color-charcoal); margin-bottom: 0.35rem;">Explore Alternative Luxury
+          Designs</h2>
+        <p style="font-size: 0.9rem; color: var(--color-muted);">
+          Switch between 4 handcrafted luxury design themes created specifically for Cloud9Creationz. Click any theme to
+          experience the entire website transform instantly.
+        </p>
+      </div>
+
+      <div class="studio-modal-grid">
+        <!-- 1. Atelier Royal -->
+        <div class="theme-card-option active" data-theme="royal" onclick="setTheme('royal')">
+          <div class="theme-card-header">
+            <strong style="font-size: 1.05rem; color: #702C45;">1. Atelier Royal (Default)</strong>
+            <div class="theme-palette-preview">
+              <span class="palette-swatch" style="background: #FFF9F2;" title="Warm Ivory"></span>
+              <span class="palette-swatch" style="background: #F5E6E8;" title="Blush Pink"></span>
+              <span class="palette-swatch" style="background: #702C45;" title="Deep Burgundy"></span>
+              <span class="palette-swatch" style="background: #C6A36B;" title="Champagne Gold"></span>
+            </div>
+          </div>
+          <p style="font-size: 0.8125rem; color: var(--color-muted); line-height: 1.5;">
+            Apple-inspired liquid glass, warm ivory background, rich Phulkari burgundy silk, and soft champagne gold
+            borders.
+          </p>
+        </div>
+
+        <!-- 2. Modern Editorial -->
+        <div class="theme-card-option" data-theme="editorial" onclick="setTheme('editorial')">
+          <div class="theme-card-header">
+            <strong style="font-size: 1.05rem; color: #18181B;">2. Modern Editorial</strong>
+            <div class="theme-palette-preview">
+              <span class="palette-swatch" style="background: #F9F9FA;" title="Alabaster"></span>
+              <span class="palette-swatch" style="background: #18181B;" title="Pitch Black"></span>
+              <span class="palette-swatch" style="background: #9E5668;" title="Rose Crimson"></span>
+              <span class="palette-swatch" style="background: #9F7A4D;" title="Warm Ochre"></span>
+            </div>
+          </div>
+          <p style="font-size: 0.8125rem; color: var(--color-muted); line-height: 1.5;">
+            High-fashion studio editorial style with crisp architectural hairlines, generous white space, and minimalist
+            black typography.
+          </p>
+        </div>
+
+        <!-- 3. Punjab Virsa Heritage -->
+        <div class="theme-card-option" data-theme="virsa" onclick="setTheme('virsa')">
+          <div class="theme-card-header">
+            <strong style="font-size: 1.05rem; color: #7C2F1E;">3. Punjab Virsa Heritage</strong>
+            <div class="theme-palette-preview">
+              <span class="palette-swatch" style="background: #F8F3EA;" title="Raw Linen"></span>
+              <span class="palette-swatch" style="background: #EEDDC9;" title="Warm Sand"></span>
+              <span class="palette-swatch" style="background: #7C2F1E;" title="Terracotta Henna"></span>
+              <span class="palette-swatch" style="background: #C98226;" title="Saffron Gold"></span>
+            </div>
+          </div>
+          <p style="font-size: 0.8125rem; color: var(--color-muted); line-height: 1.5;">
+            Earthy, tactile artisanal feel with raw unbleached Khadi linen, terracotta henna tones, and radiant saffron
+            embroidery motifs.
+          </p>
+        </div>
+
+        <!-- 4. Nocturne Velvet -->
+        <div class="theme-card-option" data-theme="midnight" onclick="setTheme('midnight')">
+          <div class="theme-card-header">
+            <strong style="font-size: 1.05rem; color: #E5B865;">4. Nocturne Velvet (Dark)</strong>
+            <div class="theme-palette-preview">
+              <span class="palette-swatch" style="background: #161217;" title="Midnight Obsidian"></span>
+              <span class="palette-swatch" style="background: #261F29;" title="Dark Plum"></span>
+              <span class="palette-swatch" style="background: #E5B865;" title="Couture Gold"></span>
+              <span class="palette-swatch" style="background: #D98C9F;" title="Petal Rose"></span>
+            </div>
+          </div>
+          <p style="font-size: 0.8125rem; color: var(--color-muted); line-height: 1.5;">
+            Gala evening luxury: obsidian velvet backdrop, shimmering gilded gold accents, and luminous translucent
+            cards.
+          </p>
+        </div>
+      </div>
+
+      <div
+        style="margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <span style="font-size: 0.775rem; color: var(--color-muted);">
+          Your selected aesthetic is remembered in your browser automatically.
+        </span>
+        <button class="btn-primary" onclick="closeDesignStudio()"
+          style="padding: 0.5rem 1.25rem; font-size: 0.8125rem;">
+          Keep This Style
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Bottom Theme Quick Switcher -->
+  <div class="theme-quick-bar" aria-label="Theme Quick Switcher">
+    <button class="theme-pill-btn active" data-theme="royal" onclick="setTheme('royal')">
+      <span class="theme-dot" style="background: #702C45;"></span>
+      <span>Royal Atelier</span>
+    </button>
+    <button class="theme-pill-btn" data-theme="editorial" onclick="setTheme('editorial')">
+      <span class="theme-dot" style="background: #18181B;"></span>
+      <span>Modern Editorial</span>
+    </button>
+    <button class="theme-pill-btn" data-theme="virsa" onclick="setTheme('virsa')">
+      <span class="theme-dot" style="background: #7C2F1E;"></span>
+      <span>Punjab Virsa</span>
+    </button>
+    <button class="theme-pill-btn" data-theme="midnight" onclick="setTheme('midnight')">
+      <span class="theme-dot" style="background: #D4AF37;"></span>
+      <span>Nocturne Velvet</span>
+    </button>
+  </div>
+
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="fab-whatsapp"
+    aria-label="Chat directly with Cloud9Creationz on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path
+        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+    </svg>
+  </a>
+
+  <!-- Toast Container -->
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- Vanilla JavaScript -->
+  <script src="/script.js"></script>
+</body>
+
+</html>

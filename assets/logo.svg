@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 60" fill="none">
+  <!-- Phulkari & Cloud Emblem -->
+  <g transform="translate(30,30)">
+    <circle cx="0" cy="0" r="22" fill="#FFF9F2" stroke="#C6A36B" stroke-width="1.5" stroke-dasharray="2 2"/>
+    <!-- Embroidery Needle Thread Loop -->
+    <path d="M-12 -6 Q 0 -18 12 -6 Q 16 4 6 12 Q -6 16 -12 6 Z" fill="none" stroke="#C98F9B" stroke-width="1.5"/>
+    <path d="M 0 -14 C 2 -6 2 -2 0 0 C -2 -2 -2 -6 0 -14" fill="#702C45"/>
+    <path d="M 14 0 C 6 2 2 2 0 0 C 2 -2 6 -2 14 0" fill="#702C45"/>
+    <path d="M 0 14 C -2 6 -2 2 0 0 C 2 2 2 6 0 14" fill="#702C45"/>
+    <path d="M -14 0 C -6 -2 -2 -2 0 0 C -2 2 -6 2 -14 0" fill="#702C45"/>
+    <circle cx="0" cy="0" r="2.8" fill="#C6A36B"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="64" y="31" font-family="'Cormorant Garamond', Georgia, serif" font-size="20" font-weight="600" letter-spacing="2.5" fill="#262326">CLOUD9CREATIONZ</text>
+  <text x="66" y="46" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="8.5" font-weight="500" letter-spacing="2.5" fill="#702C45">HANDMADE CRAFTS · PUNJAB</text>
+</svg>

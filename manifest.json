@@ -1,0 +1,16 @@
+{
+  "name": "Cloud9Creationz — Handmade Crafts & Personalized Gifts",
+  "short_name": "Cloud9Creationz",
+  "description": "Handcrafted with love from Punjab. Personalized gift hampers, custom hand embroidery, bespoke printed T-shirts, and heartfelt handmade creations.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF9F2",
+  "theme_color": "#702C45",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
