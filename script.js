@@ -16,7 +16,7 @@ const CONFIG = {
 
   // Business WhatsApp Number (International format without '+' or spaces, e.g., 919876543210)
   // REPLACE WITH YOUR ACTUAL BUSINESS WHATSAPP NUMBER
-  whatsappNumber: "919876543210",
+  whatsappNumber: "919501560121",
 
   // Business Contact Email
   // REPLACE WITH YOUR ACTUAL BUSINESS EMAIL
@@ -39,7 +39,7 @@ const CONFIG = {
     isConfigured: false, // Set to true once you have entered your Form URL and Entry IDs below
     formUrl: "https://docs.google.com/forms/d/e/REPLACE_WITH_YOUR_FORM_ID/formResponse",
     viewFormUrl: "https://docs.google.com/forms/d/e/REPLACE_WITH_YOUR_FORM_ID/viewform",
-    
+
     // Replace these entry IDs with the ones from your actual Google Form
     entryIds: {
       customerName: "entry.1000001",
@@ -78,7 +78,7 @@ const PRODUCTS = [
     category: "hampers",
     categoryLabel: "Gift Hamper",
     price: 2499,
-    image: "/assets/images/hamper.jpg",
+    image: "/assets/images/cover4.jpeg",
     description: "An opulent bespoke gift hamper in a textured blush keepsake box with satin ribbon. Includes an artisanal soy scented candle, hand-engraved wooden calligraphy plaque, organic herbal tea jar, dried wild botanicals, and personalized greeting scroll.",
     customizable: true,
     hasSizes: false,
@@ -89,11 +89,11 @@ const PRODUCTS = [
   },
   {
     id: "kp-embroidery-01",
-    name: "Phulkari Blossom Floral Hoop",
+    name: "Handmade with Love, Created with Creativity",
     category: "embroidery",
     categoryLabel: "Hand Embroidery",
     price: 1599,
-    image: "/assets/images/embroidery.jpg",
+    image: "/assets/images/embroidery.jpeg",
     description: "Exquisite hand-embroidered wooden hoop inspired by authentic Punjabi Phulkari craftsmanship. Rendered with fine silk threads in dusty rose, burgundy, and champagne accents on unbleached natural linen.",
     customizable: true,
     hasSizes: false,
@@ -104,11 +104,11 @@ const PRODUCTS = [
   },
   {
     id: "kp-tshirt-01",
-    name: "Bespoke Botanical Embroidered T-Shirt",
+    name: "Custom Printed & Designed T-Shirts",
     category: "tshirts",
     categoryLabel: "Custom T-Shirts",
     price: 1099,
-    image: "/assets/images/tshirt.jpg",
+    image: "/assets/images/tshirt1.jpeg",
     description: "Ultra-soft 240 GSM combed organic cotton t-shirt featuring a delicate hand-embroidered chest floral spray and bespoke cursive monogram initials. Tailored for effortless luxury comfort.",
     customizable: true,
     hasSizes: true,
@@ -124,7 +124,7 @@ const PRODUCTS = [
     category: "gifts",
     categoryLabel: "Personalized Gift",
     price: 1450,
-    image: "/assets/images/giftbox.jpg",
+    image: "/assets/images/cover6.jpeg",
     description: "Handcrafted pine wood memory box with custom laser-engraved cursive names and commemorative date on the sliding lid. Finished with champagne satin ribbon and custom wax seal stamp.",
     customizable: true,
     hasSizes: false,
@@ -135,11 +135,11 @@ const PRODUCTS = [
   },
   {
     id: "kp-accessories-01",
-    name: "Phulkari Linen Tote & Bookmark Set",
+    name: "Handmade Hoop Embroidery",
     category: "accessories",
     categoryLabel: "Handmade Accessories",
     price: 950,
-    image: "/assets/images/accessories.jpg",
+    image: "/assets/images/embroidery.jpeg",
     description: "Thoughtful handmade everyday ensemble consisting of a hand-embroidered raw linen tote bag with vibrant Punjabi Phulkari medallion, two matching fabric bookmarks with silk tassels, and a soft linen hair scrunchie.",
     customizable: true,
     hasSizes: false,
@@ -154,7 +154,7 @@ const PRODUCTS = [
     category: "embroidery",
     categoryLabel: "Hand Embroidery",
     price: 1850,
-    image: "/assets/images/embroidery.jpg",
+    image: "/assets/images/cover10.jpeg",
     description: "Commemorate weddings, anniversaries, or baby milestones with a custom hand-embroidered hoop featuring the couple's names, auspicious date, and botanical wreath in gold and rose silk thread.",
     customizable: true,
     hasSizes: false,
@@ -169,7 +169,7 @@ const PRODUCTS = [
     category: "tshirts",
     categoryLabel: "Custom T-Shirts",
     price: 1999,
-    image: "/assets/images/tshirt.jpg",
+    image: "/assets/images/tshirtdesign1.jpeg",
     description: "Matching pair of organic cotton t-shirts with personalized subtle date or initials embroidered near the cuff or chest. An intimate, understated anniversary or honeymoon gift.",
     customizable: true,
     hasSizes: true,
@@ -181,11 +181,11 @@ const PRODUCTS = [
   },
   {
     id: "kp-hamper-02",
-    name: "Luxury Wedding Keepsake Hamper",
+    name: "Custom Mobile Covers",
     category: "occasions",
     categoryLabel: "Special Occasion",
     price: 3299,
-    image: "/assets/images/hamper.jpg",
+    image: "/assets/images/mobilecoverdesign.jpeg",
     description: "An extraordinary celebratory hamper crafted for brides, grooms, or housewarmings. Includes a personalized photo/name hoop, hand-poured brass candle, gold-plated brass tea strainer, artisanal saffron honey, and gourmet dry fruits in glass jars.",
     customizable: true,
     hasSizes: false,
@@ -336,10 +336,7 @@ function renderCatalog() {
           <span>Production: ${product.productionDays}</span>
         </div>
         <div class="product-price-row">
-          <div>
-            <span class="price-main tabular-nums">₹${product.price.toLocaleString('en-IN')}</span>
-            <span class="price-sub"> (Inclusive of taxes)</span>
-          </div>
+       
         </div>
         <div class="product-action-grid">
           <button class="btn-add-cart" onclick="quickAddToCart('${product.id}')" aria-label="Add ${product.name} to bag">
@@ -392,7 +389,6 @@ function openProductModal(productId) {
         <div>
           <span class="pdp-category">${product.categoryLabel}</span>
           <h2 class="pdp-title">${product.name}</h2>
-          <div class="pdp-price tabular-nums">₹${product.price.toLocaleString('en-IN')}</div>
         </div>
         <p class="pdp-desc">${product.description}</p>
 
@@ -583,7 +579,7 @@ function orderItemDirectWhatsApp(productId) {
  */
 function addItemToCart(product, quantity = 1, color = null, size = null, personalization = "") {
   // Check if same product with same customizations exists
-  const existing = cart.find(item => 
+  const existing = cart.find(item =>
     item.productId === product.id &&
     item.color === color &&
     item.size === size &&
@@ -864,7 +860,7 @@ function submitOrderViaWhatsApp() {
   ].filter(Boolean).join("\n");
 
   const waUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
-  
+
   // Clear cart upon generating order
   showToast("Opening WhatsApp with your order draft...");
   window.open(waUrl, "_blank", "noopener,noreferrer");
@@ -987,7 +983,7 @@ function submitCustomInquiry(e) {
   const waUrl = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(lines)}`;
   window.open(waUrl, "_blank", "noopener,noreferrer");
   showToast("Opening WhatsApp with your bespoke request...");
-  
+
   // Reset form
   const form = document.getElementById("custom-inquiry-form");
   if (form) form.reset();
