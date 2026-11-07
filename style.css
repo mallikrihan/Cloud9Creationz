@@ -2562,3 +2562,552 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+
+
+/* ==========================================================================
+   RESPONSIVE DESIGN — Full Device Coverage
+   Mobile-first fixes for all breakpoints:
+   xs: <360px | sm: 360–479px | md: 480–639px | lg: 640–767px
+   tablet: 768–991px | desktop: 992px+
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   ANNOUNCEMENT BAR — mobile wrapping fix
+   -------------------------------------------------------------------------- */
+@media (max-width: 600px) {
+  .top-announcement {
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 0.45rem 1rem;
+    font-size: 0.75rem;
+  }
+  .top-announcement span {
+    font-size: 0.72rem;
+    line-height: 1.4;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   NAVIGATION — tighten up for mid-range (768–991px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .nav-container {
+    padding: 0.7rem 1rem;
+    gap: 0.75rem;
+  }
+  .brand-title {
+    font-size: 1.15rem;
+    letter-spacing: 0.08em;
+  }
+  .brand-tagline {
+    display: none; /* hide sub-tagline on tablet/mobile */
+  }
+  .brand-emblem {
+    width: 32px;
+    height: 32px;
+  }
+  .design-studio-btn span {
+    display: none; /* icon only on tablet */
+  }
+  .nav-actions {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .nav-container {
+    padding: 0.6rem 0.85rem;
+  }
+  .brand-title {
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+  }
+  .brand-emblem {
+    width: 28px;
+    height: 28px;
+  }
+  .icon-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   HERO SECTION — full responsiveness
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .hero-section {
+    padding: 2rem 1.25rem 3.5rem 1.25rem;
+  }
+  .hero-grid {
+    gap: 2rem;
+  }
+  .hero-title {
+    font-size: clamp(2rem, 7vw, 3rem);
+  }
+  .hero-description {
+    font-size: 0.95rem;
+  }
+  .hero-actions {
+    gap: 0.75rem;
+  }
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary {
+    padding: 0.6rem 1.1rem;
+    font-size: 0.85rem;
+  }
+  .hero-trust-strip {
+    gap: 1.25rem;
+    font-size: 0.775rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .hero-section {
+    padding: 1.5rem 1rem 3rem 1rem;
+  }
+  .hero-title {
+    font-size: clamp(1.75rem, 8vw, 2.4rem);
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-trust-strip {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .hero-floating-glass-tag {
+    padding: 0.75rem 1rem;
+  }
+  .tag-brand {
+    font-size: 0.9rem;
+  }
+  .tag-sub {
+    font-size: 0.65rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SECTION WRAPPERS — extra small screen padding
+   -------------------------------------------------------------------------- */
+@media (max-width: 479px) {
+  .section-wrapper {
+    padding: 2.25rem 1rem;
+  }
+  .section-header {
+    margin-bottom: 2rem;
+  }
+  .section-title {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+  }
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   CATALOG TOOLBAR — responsive stacking
+   -------------------------------------------------------------------------- */
+@media (max-width: 839px) {
+  .catalog-toolbar {
+    padding: 0.85rem 1rem;
+    gap: 0.85rem;
+  }
+  .search-box {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .filter-tabs {
+    gap: 0.4rem;
+    padding-bottom: 2px;
+    /* make scrollbar invisible but functional */
+    scrollbar-width: none;
+  }
+  .filter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .sort-select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 479px) {
+  .filter-tab {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+  }
+  .sort-select {
+    font-size: 0.8125rem;
+    padding: 0.5rem 1rem 0.5rem 0.75rem;
+  }
+  .search-input {
+    font-size: 0.8125rem;
+    padding: 0.55rem 0.85rem 0.55rem 2.2rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   CATEGORY GRID — 1 col on xs, 2 col on sm+, 3 col on lg+
+   -------------------------------------------------------------------------- */
+@media (max-width: 479px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .category-info {
+    padding: 1.1rem;
+  }
+  .category-name {
+    font-size: 1.15rem;
+  }
+  .category-desc {
+    font-size: 0.825rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   PRODUCT GRID — ensure 1 col on xs, 2 col on sm
+   -------------------------------------------------------------------------- */
+@media (max-width: 479px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .product-body {
+    padding: 1rem 1.1rem 1.25rem 1.1rem;
+  }
+  .product-title {
+    font-size: 1.1rem;
+  }
+  .product-summary {
+    font-size: 0.8rem;
+  }
+}
+
+/* Two columns on 480–599px for product grid */
+@media (min-width: 480px) and (max-width: 599px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .product-body {
+    padding: 0.9rem 1rem 1.1rem 1rem;
+  }
+  .product-title {
+    font-size: 1rem;
+  }
+  .product-action-grid {
+    gap: 0.35rem;
+  }
+  .btn-add-cart {
+    font-size: 0.75rem;
+    padding: 0.45rem 0.6rem;
+  }
+  .btn-quick-wa {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   STORY SECTION — single col on mobile
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .story-pillars {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.1rem;
+  }
+  .story-content h2 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+  .story-content p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .story-pillars {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .story-floating-badge {
+    right: 0.75rem;
+    padding: 0.65rem 1rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   CUSTOM GIFT FORM — small screen tweaks
+   -------------------------------------------------------------------------- */
+@media (max-width: 479px) {
+  .custom-request-box {
+    padding: 1.5rem 1rem;
+    border-radius: var(--radius-lg);
+  }
+  .form-input,
+  .form-select,
+  .form-textarea {
+    font-size: 0.875rem;
+    padding: 0.65rem 0.85rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   INSTAGRAM GALLERY — 2 col on mobile, 4 col on tablet+
+   -------------------------------------------------------------------------- */
+@media (max-width: 479px) {
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   FAQ — font size for small screens
+   -------------------------------------------------------------------------- */
+@media (max-width: 479px) {
+  .faq-question {
+    font-size: 1rem;
+    padding: 1rem 1.1rem;
+  }
+  .faq-answer {
+    font-size: 0.875rem;
+    padding: 0 1.1rem;
+  }
+  .faq-item.active .faq-answer {
+    padding: 0 1.1rem 1.1rem 1.1rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   FOOTER — extra bottom padding for mobile bottom bar
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .site-footer {
+    /* make room for the fixed bottom tab bar (~60px) */
+    padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (max-width: 479px) {
+  .site-footer {
+    padding: 3rem 1rem calc(5.5rem + env(safe-area-inset-bottom, 0px)) 1rem;
+  }
+  .footer-brand h3 {
+    font-size: 1.35rem;
+  }
+  .footer-brand p {
+    font-size: 0.825rem;
+  }
+  .footer-col h4 {
+    font-size: 1rem;
+  }
+  .footer-link {
+    font-size: 0.825rem;
+  }
+  .footer-bottom {
+    font-size: 0.75rem;
+    gap: 0.75rem;
+  }
+  .footer-bottom-links {
+    gap: 1rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   MODALS — full-screen sheet on small phones
+   -------------------------------------------------------------------------- */
+@media (max-width: 600px) {
+  .modal-backdrop {
+    padding: 0;
+    align-items: flex-end; /* sheet slides up from bottom */
+  }
+  .modal-window {
+    max-width: 100%;
+    max-height: 92vh;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    transform: translateY(100%);
+  }
+  .modal-backdrop.open .modal-window {
+    transform: translateY(0);
+  }
+}
+
+/* Product detail modal body padding on mobile */
+@media (max-width: 600px) {
+  .product-modal-body {
+    padding: 1.5rem 1.25rem;
+    gap: 1rem;
+  }
+  .pdp-title {
+    font-size: 1.35rem;
+  }
+  .product-modal-media {
+    aspect-ratio: 16/9;
+  }
+}
+
+/* Checkout / order modal form on mobile */
+@media (max-width: 600px) {
+  #order-modal-backdrop .modal-window {
+    padding: 1.5rem 1.1rem;
+  }
+  #order-modal-backdrop .form-grid-2 {
+    grid-template-columns: 1fr;
+  }
+  /* Override inline grid-column span on mobile */
+  #order-modal-backdrop .form-group[style*="grid-column"] {
+    grid-column: 1 !important;
+  }
+}
+
+/* Policy modal */
+@media (max-width: 600px) {
+  #policy-modal-backdrop .modal-window {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   CART DRAWER — tighten cart-item on very narrow screens
+   -------------------------------------------------------------------------- */
+@media (max-width: 400px) {
+  .cart-drawer-panel {
+    width: 100vw;
+  }
+  .cart-item {
+    grid-template-columns: 60px 1fr;
+  }
+  .cart-item-img {
+    width: 60px;
+    height: 60px;
+  }
+  .cart-items-list {
+    padding: 1rem;
+  }
+  .cart-footer {
+    padding: 1rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   MOBILE BOTTOM BAR — safe area & sizing
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .mobile-bottom-bar {
+    padding: 0.4rem 0.5rem max(0.5rem, env(safe-area-inset-bottom));
+  }
+  .bottom-tab {
+    font-size: 0.625rem;
+    padding: 0.2rem 0.35rem;
+  }
+  .bottom-tab svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   THEME QUICK SWITCHER BAR — scroll horizontally on small screens
+   -------------------------------------------------------------------------- */
+.theme-quick-bar {
+  display: flex;
+  position: fixed;
+  bottom: calc(3.8rem + env(safe-area-inset-bottom, 0px));
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 0.4rem;
+  background: rgba(255, 249, 242, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(198, 163, 107, 0.3);
+  border-radius: var(--radius-full);
+  padding: 0.4rem 0.75rem;
+  box-shadow: 0 4px 18px rgba(112, 44, 69, 0.1);
+  z-index: 44;
+  max-width: calc(100vw - 2rem);
+  overflow-x: auto;
+  scrollbar-width: none;
+  white-space: nowrap;
+}
+
+.theme-quick-bar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .theme-quick-bar {
+    bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .theme-pill-btn span:last-child {
+    display: none; /* icon-only theme pills on xs */
+  }
+  .theme-pill-btn {
+    padding: 0.3rem 0.5rem;
+    gap: 0;
+  }
+  .theme-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Theme pill overrides for xs screens already handled above */
+
+/* --------------------------------------------------------------------------
+   FLOATING WHATSAPP FAB — position above bottom bar on mobile
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .fab-whatsapp {
+    bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
+    right: 1rem;
+    width: 48px;
+    height: 48px;
+  }
+  .fab-whatsapp svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   DESIGN STUDIO MODAL GRID — stack on mobile
+   -------------------------------------------------------------------------- */
+/* Studio modal responsive handled in @media block above */
+
+/* Design studio btn icon-only on tablet is handled via nav-actions media query above */
+
+/* --------------------------------------------------------------------------
+   GENERAL — prevent horizontal scroll on all screen sizes
+   -------------------------------------------------------------------------- */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Touch target minimum size for accessibility */
+@media (max-width: 991px) {
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .filter-tab,
+  .chip-btn,
+  .footer-link,
+  .mobile-nav-link,
+  .bottom-tab,
+  .faq-question,
+  .category-action-link,
+  .footer-bottom-links a {
+    min-height: 36px; /* smaller but still tappable */
+  }
+}
