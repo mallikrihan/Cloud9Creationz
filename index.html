@@ -23,8 +23,8 @@
   <meta name="twitter:image" content="/assets/images/hero.jpg" />
 
   <!-- Favicon & PWA Manifest -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="manifest" href="./manifest.json" />
   <meta name="theme-color" content="#702C45" />
 
   <!-- Google Fonts -->
@@ -35,7 +35,7 @@
     rel="stylesheet" />
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="./style.css" />
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -54,7 +54,17 @@
     "currenciesAccepted": "INR"
   }
   </script>
-<style>#nav-wa-btn{display:none;}@media (max-width: 600px){#nav-wa-btn{display:inline-block;}}</style>
+  <style>
+    #nav-wa-btn {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      #nav-wa-btn {
+        display: inline-block;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -168,7 +178,7 @@
         </button>
 
         <!-- Direct WhatsApp Order CTA -->
-        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="btn-primary btn-whatsapp"
+        <a href="https://wa.me/919501560121" target="_blank" rel="noopener noreferrer" class="btn-primary btn-whatsapp"
           style="display: none;" id="nav-wa-btn" aria-label="Chat on WhatsApp">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path
@@ -253,8 +263,9 @@
             <span>Artisanal Punjabi Craftsmanship &amp; Gifting</span>
           </div>
 
-          <h1 class="hero-title">
-            Little Details. <em>Handmade With Heart.</em>
+          <h1 class="hero-title" aria-label="Little Details. Handmade With Heart. Little Things. Tells a Story.">
+            <span id="hero-typed-text">Little Details. <em>Handmade With Heart.</em></span><span
+              class="hero-type-cursor" aria-hidden="true">|</span>
           </h1>
 
           <p class="hero-description">
@@ -691,7 +702,7 @@
               </select>
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label class="form-label" for="custom-budget">Estimated Budget Range <span
                   class="optional">(Optional)</span></label>
               <select id="custom-budget" class="form-select">
@@ -700,13 +711,13 @@
                 <option value="₹3,000 - ₹6,000">₹3,000 - ₹6,000</option>
                 <option value="Above ₹6,000">Above ₹6,000 (Luxury / Bulk)</option>
               </select>
-            </div>
+            </div> -->
 
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label class="form-label" for="custom-date">Needed By Date <span
                   class="optional">(Optional)</span></label>
               <input type="date" id="custom-date" class="form-input" />
-            </div>
+            </div> -->
 
           </div>
 
@@ -723,22 +734,36 @@
               placeholder="Describe what you would like: custom names, quotes, thread details, hamper elements, or themes..."
               required></textarea>
             <span class="form-help-text">
-              Note: You can easily share reference photos or sketches directly on WhatsApp once your inquiry draft
-              opens.
+              Note: Details will be recorded directly into our Google Sheet. You can also share reference photos or
+              sketches directly on WhatsApp.
             </span>
           </div>
 
-          <div style="margin-top: 2rem; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-            <button type="submit" class="btn-primary btn-whatsapp"
-              style="padding: 0.85rem 2rem; font-size: 1rem; width: min(100%, 340px);">
+          <!-- Status feedback notification -->
+          <div id="custom-form-status"
+            style="display: none; width: 100%; text-align: center; border-radius: var(--radius-md); padding: 0.9rem 1.25rem; font-size: 0.9rem; margin-top: 1.25rem; transition: all 0.3s ease;">
+          </div>
+
+          <div style="margin-top: 2rem; display: flex; flex-direction: column; align-items: center; gap: 0.85rem;">
+            <button type="submit" id="custom-submit-btn" class="btn-primary"
+              style="padding: 0.85rem 2rem; font-size: 1rem; width: min(100%, 340px); gap: 0.65rem;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" />
+                <polyline points="17 21 17 13 7 13 7 21" />
+                <polyline points="7 3 7 8 15 8" />
+              </svg>
+              <span>Submit to Google Sheet</span>
+            </button>
+            <button type="button" class="btn-secondary" onclick="sendInquiryDirectWhatsApp()"
+              style="font-size: 0.85rem; padding: 0.6rem 1.5rem; width: min(100%, 340px); gap: 0.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
-              Send Request via WhatsApp
+              <span>Direct WhatsApp Inquiry</span>
             </button>
             <span style="font-size: 0.8125rem; color: var(--color-muted); text-align: center;">
-              Final price confirmed after design review. We reply within a few hours.
+              Your inquiry details are recorded directly in our Google Sheet. We reply within a few hours.
             </span>
           </div>
         </form>
@@ -975,7 +1000,7 @@
           <h3 style="font-size: 1.25rem;">WhatsApp Chat</h3>
           <p style="font-size: 0.85rem; color: var(--color-muted);">Fastest response for design consultations and custom
             order updates.</p>
-          <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer"
+          <a href="https://wa.me/919501560121" target="_blank" rel="noopener noreferrer"
             class="btn-primary btn-whatsapp" style="margin-top: 0.5rem; font-size: 0.8125rem;">
             Chat on WhatsApp
           </a>
@@ -1090,7 +1115,13 @@
 
     <div class="footer-bottom">
       <div>
-        &copy; <span id="footer-year">2026</span> Cloud9Creationz. All Rights Reserved. Handcrafted With Heart.
+        <div>
+          &copy; <span id="footer-year">2026</span> Cloud9Creationz. All Rights Reserved. Handcrafted With Heart.
+        </div>
+        <div style="margin-top: 0.4rem; font-size: 0.775rem; color: #CFC5C8;">
+          Designed &amp; Developed by Mallikrehan · Made with <span style="color: #E25555;">♥</span> in Bengaluru,
+          Karnataka, India.
+        </div>
       </div>
       <div class="footer-bottom-links">
         <a href="javascript:void(0)" onclick="openPolicyModal('privacy')">Privacy</a>
@@ -1313,7 +1344,7 @@
       </svg>
       <span>Shop</span>
     </a>
-    <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="bottom-tab"
+    <a href="https://wa.me/919501560121" target="_blank" rel="noopener noreferrer" class="bottom-tab"
       style="color: #25D366;">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path
@@ -1438,6 +1469,104 @@
     </div>
   </div>
 
+  <!-- ========================================================================
+       19. GOOGLE SHEETS SETUP & CONFIGURATION MODAL
+       ======================================================================== -->
+  <div id="gsheet-setup-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Google Sheet Setup">
+    <div class="modal-window" style="max-width: 680px; padding: 2rem;">
+      <button class="modal-close-btn" onclick="closeGSheetSetupModal()" aria-label="Close dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+
+      <div>
+        <span class="section-kicker">Owner Integration Setup</span>
+        <h2 style="font-size: 1.6rem; color: var(--color-charcoal); margin-bottom: 0.5rem;">Connect Your Google Sheet
+        </h2>
+        <p style="font-size: 0.875rem; color: var(--color-muted); line-height: 1.6;">
+          Your customer's inquiry was captured! To store submissions directly in your Google Sheet, follow these 3 quick
+          steps:
+        </p>
+      </div>
+
+      <div
+        style="margin: 1.25rem 0; display: flex; flex-direction: column; gap: 0.9rem; font-size: 0.85rem; color: var(--color-charcoal-light);">
+        <div
+          style="background: var(--color-ivory); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0.85rem 1rem;">
+          <strong>Step 1:</strong> Create a new spreadsheet at <a href="https://sheets.new" target="_blank"
+            rel="noopener noreferrer"
+            style="color: var(--color-burgundy); text-decoration: underline; font-weight: 600;">sheets.new ↗</a>
+        </div>
+        <div
+          style="background: var(--color-ivory); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0.85rem 1rem;">
+          <strong>Step 2:</strong> In Google Sheets, click <b>Extensions &gt; Apps Script</b>. Paste the script below
+          and click <b>Deploy &gt; New deployment &gt; Web app</b> (Set <em>Execute as: Me</em>, <em>Who has access:
+            Anyone</em>).
+        </div>
+        <div
+          style="background: var(--color-ivory); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 0.85rem 1rem;">
+          <strong>Step 3:</strong> Copy your Web App URL and paste it below:
+        </div>
+      </div>
+
+      <div style="margin-bottom: 1.25rem;">
+        <label class="form-label" for="gsheet-url-input" style="margin-bottom: 0.35rem;">Your Google Web App
+          URL:</label>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <input type="url" id="gsheet-url-input" class="form-input" style="flex: 1 1 280px;"
+            placeholder="https://script.google.com/macros/s/.../exec" />
+          <button type="button" class="btn-primary" onclick="saveGSheetUrlFromModal()"
+            style="font-size: 0.85rem; padding: 0.6rem 1.25rem;">Save &amp; Submit</button>
+        </div>
+      </div>
+
+      <div
+        style="background: #1F1C1F; color: #ECE5DE; border-radius: var(--radius-md); padding: 1rem; position: relative;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+          <span
+            style="font-size: 0.75rem; color: var(--color-gold-light); font-weight: 600; text-transform: uppercase;">Google
+            Apps Script Code</span>
+          <button type="button" class="btn-outline" onclick="copyGSheetScriptCode()"
+            style="font-size: 0.75rem; padding: 0.25rem 0.75rem; color: #FFFFFF; border-color: rgba(255,255,255,0.3);">Copy
+            Code</button>
+        </div>
+        <pre id="gsheet-script-pre"
+          style="font-family: monospace; font-size: 0.75rem; max-height: 140px; overflow-y: auto; color: #F5E6E8; line-height: 1.5; white-space: pre-wrap; word-break: break-all;">function doPost(e) {
+  var lock = LockService.getScriptLock();
+  lock.tryLock(10000);
+  try {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    if (sheet.getLastRow() === 0) {
+      sheet.appendRow(["Timestamp", "Full Name", "Phone / WhatsApp", "Type of Creation", "Occasion", "Budget Range", "Needed By Date", "Preferred Colors", "Design Description"]);
+      sheet.getRange(1, 1, 1, 9).setFontWeight("bold").setBackground("#F5E6E8").setFontColor("#702C45");
+    }
+    var data = e.parameter || {};
+    var timestamp = Utilities.formatDate(new Date(), "Asia/Kolkata", "yyyy-MM-dd HH:mm:ss");
+    sheet.appendRow([timestamp, data.name || "", data.phone || "", data.type || "", data.occasion || "", data.budget || "", data.date || "", data.colors || "", data.description || ""]);
+    return ContentService.createTextOutput(JSON.stringify({ status: "success" })).setMimeType(ContentService.MimeType.JSON);
+  } catch (err) {
+    return ContentService.createTextOutput(JSON.stringify({ status: "error", error: err.toString() })).setMimeType(ContentService.MimeType.JSON);
+  } finally {
+    lock.releaseLock();
+  }
+}
+function doGet(e) { return doPost(e); }</pre>
+      </div>
+
+      <div
+        style="margin-top: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+        <span style="font-size: 0.775rem; color: var(--color-muted);">In the meantime, you can also forward to WhatsApp
+          directly:</span>
+        <button type="button" class="btn-primary btn-whatsapp" onclick="proceedToWhatsAppFromGSheetModal()"
+          style="font-size: 0.8125rem; padding: 0.5rem 1rem;">
+          Open in WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Floating Bottom Theme Quick Switcher -->
   <div class="theme-quick-bar" aria-label="Theme Quick Switcher">
     <button class="theme-pill-btn active" data-theme="royal" onclick="setTheme('royal')">
@@ -1459,7 +1588,7 @@
   </div>
 
   <!-- Floating WhatsApp Quick Button -->
-  <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="fab-whatsapp"
+  <a href="https://wa.me/919501560121" target="_blank" rel="noopener noreferrer" class="fab-whatsapp"
     aria-label="Chat directly with Cloud9Creationz on WhatsApp">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <path
@@ -1471,7 +1600,7 @@
   <div id="toast-container" aria-live="polite"></div>
 
   <!-- Vanilla JavaScript -->
-  <script src="/script.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>

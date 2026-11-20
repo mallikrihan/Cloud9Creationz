@@ -77,7 +77,7 @@ const PRODUCTS = [
     name: "Royal Celebration Gift Hamper",
     category: "hampers",
     categoryLabel: "Gift Hamper",
-    price: 2499,
+
     image: "/assets/images/cover4.jpeg",
     description: "An opulent bespoke gift hamper in a textured blush keepsake box with satin ribbon. Includes an artisanal soy scented candle, hand-engraved wooden calligraphy plaque, organic herbal tea jar, dried wild botanicals, and personalized greeting scroll.",
     customizable: true,
@@ -92,7 +92,6 @@ const PRODUCTS = [
     name: "Handmade with Love, Created with Creativity",
     category: "embroidery",
     categoryLabel: "Hand Embroidery",
-    price: 1599,
     image: "/assets/images/embroidery.jpeg",
     description: "Exquisite hand-embroidered wooden hoop inspired by authentic Punjabi Phulkari craftsmanship. Rendered with fine silk threads in dusty rose, burgundy, and champagne accents on unbleached natural linen.",
     customizable: true,
@@ -107,7 +106,6 @@ const PRODUCTS = [
     name: "Custom Printed & Designed T-Shirts",
     category: "tshirts",
     categoryLabel: "Custom T-Shirts",
-    price: 1099,
     image: "/assets/images/tshirt1.jpeg",
     description: "Ultra-soft 240 GSM combed organic cotton t-shirt featuring a delicate hand-embroidered chest floral spray and bespoke cursive monogram initials. Tailored for effortless luxury comfort.",
     customizable: true,
@@ -123,7 +121,7 @@ const PRODUCTS = [
     name: "Personalized Wooden Keepsake Box",
     category: "gifts",
     categoryLabel: "Personalized Gift",
-    price: 1450,
+
     image: "/assets/images/cover6.jpeg",
     description: "Handcrafted pine wood memory box with custom laser-engraved cursive names and commemorative date on the sliding lid. Finished with champagne satin ribbon and custom wax seal stamp.",
     customizable: true,
@@ -138,7 +136,7 @@ const PRODUCTS = [
     name: "Handmade Hoop Embroidery",
     category: "accessories",
     categoryLabel: "Handmade Accessories",
-    price: 950,
+
     image: "/assets/images/embroidery.jpeg",
     description: "Thoughtful handmade everyday ensemble consisting of a hand-embroidered raw linen tote bag with vibrant Punjabi Phulkari medallion, two matching fabric bookmarks with silk tassels, and a soft linen hair scrunchie.",
     customizable: true,
@@ -153,7 +151,7 @@ const PRODUCTS = [
     name: "Custom Name & Date Wedding Hoop",
     category: "embroidery",
     categoryLabel: "Hand Embroidery",
-    price: 1850,
+
     image: "/assets/images/cover10.jpeg",
     description: "Commemorate weddings, anniversaries, or baby milestones with a custom hand-embroidered hoop featuring the couple's names, auspicious date, and botanical wreath in gold and rose silk thread.",
     customizable: true,
@@ -168,7 +166,7 @@ const PRODUCTS = [
     name: "Personalized Couple Embroidered T-Shirts (Set of 2)",
     category: "tshirts",
     categoryLabel: "Custom T-Shirts",
-    price: 1999,
+
     image: "/assets/images/tshirtdesign1.jpeg",
     description: "Matching pair of organic cotton t-shirts with personalized subtle date or initials embroidered near the cuff or chest. An intimate, understated anniversary or honeymoon gift.",
     customizable: true,
@@ -184,7 +182,6 @@ const PRODUCTS = [
     name: "Custom Mobile Covers",
     category: "occasions",
     categoryLabel: "Special Occasion",
-    price: 3299,
     image: "/assets/images/mobilecoverdesign.jpeg",
     description: "An extraordinary celebratory hamper crafted for brides, grooms, or housewarmings. Includes a personalized photo/name hoop, hand-poured brass candle, gold-plated brass tea strainer, artisanal saffron honey, and gourmet dry fruits in glass jars.",
     customizable: true,
@@ -232,7 +229,7 @@ function saveCart() {
 
 /**
  * ============================================================================
- * FIRST VISIT ANIMATION CONTROLLER
+ * FIRST VISIT ANIMATION CONTROLLER & DIWALI FIREWORKS TRIGGER
  * ============================================================================
  */
 function initIntroAnimation() {
@@ -247,6 +244,10 @@ function initIntroAnimation() {
   if (alreadySeen || prefersReducedMotion) {
     intro.classList.add("hidden");
     intro.style.display = "none";
+    // For return visits, celebrate with fireworks after page load
+    if (!prefersReducedMotion) {
+      setTimeout(() => triggerDiwaliFireworks(), 400);
+    }
     return;
   }
 
@@ -255,7 +256,11 @@ function initIntroAnimation() {
     sessionStorage.setItem("kp_intro_seen", "true");
     setTimeout(() => {
       intro.style.display = "none";
-    }, 600);
+      // Trigger Diwali fireworks right as the website is revealed!
+      if (!prefersReducedMotion) {
+        triggerDiwaliFireworks();
+      }
+    }, 400);
   }
 
   if (skipBtn) {
@@ -264,6 +269,390 @@ function initIntroAnimation() {
 
   // Automatically fade out after 2.4 seconds
   setTimeout(hideIntro, 2400);
+}
+
+/**
+ * ============================================================================
+ * FESTIVE DIWALI COUPON & OFFER HELPERS
+ * ============================================================================
+ */
+function copyFestiveCoupon(code, btnElem) {
+  if (!code) code = "DIWALI20";
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(code).catch(() => {});
+  } else {
+    const tempInput = document.createElement("input");
+    tempInput.value = code;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    try { document.execCommand("copy"); } catch (e) {}
+    document.body.removeChild(tempInput);
+  }
+
+  if (btnElem) {
+    const badge = btnElem.querySelector(".coupon-copy-badge");
+    const originalText = badge ? badge.textContent : "";
+    if (badge) badge.textContent = "✓ Copied!";
+    setTimeout(() => {
+      if (badge) badge.textContent = originalText;
+    }, 2200);
+  }
+
+  showToast(`🎉 Coupon "${code}" copied! Enjoy 20% OFF festive discount.`);
+}
+
+function grabFestiveOffer(code) {
+  if (!code) code = "DIWALI20";
+  copyFestiveCoupon(code);
+  showToast(`✨ Festive Offer Activated! Code "${code}" copied. Pick your favorite handcrafted gifts!`);
+
+  // Smooth scroll to catalog
+  scrollToSection("catalog");
+
+  // Spark a burst of celebration fireworks!
+  if (typeof triggerDiwaliFireworks === "function") {
+    triggerDiwaliFireworks(true);
+  }
+}
+
+/**
+ * ============================================================================
+ * LIGHTWEIGHT DIWALI FIREWORKS ENGINE
+ * Non-intrusive (pointer-events: none), high-performance canvas animation.
+ * Automatically halts RAF loop when all particles fade, using zero background CPU.
+ * ============================================================================
+ */
+const diwaliFireworksState = {
+  canvas: null,
+  ctx: null,
+  rockets: [],
+  particles: [],
+  animId: null,
+  isRunning: false,
+  width: 0,
+  height: 0,
+  dpr: 1
+};
+
+function initDiwaliFireworksCanvas() {
+  const canvas = document.getElementById("diwali-fireworks-canvas");
+  if (!canvas) return null;
+
+  diwaliFireworksState.canvas = canvas;
+  diwaliFireworksState.ctx = canvas.getContext("2d");
+  canvas.style.pointerEvents = "none";
+
+  function resize() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    diwaliFireworksState.width = w;
+    diwaliFireworksState.height = h;
+    diwaliFireworksState.dpr = dpr;
+
+    canvas.width = Math.floor(w * dpr);
+    canvas.height = Math.floor(h * dpr);
+    canvas.style.width = `${w}px`;
+    canvas.style.height = `${h}px`;
+    if (diwaliFireworksState.ctx) {
+      diwaliFireworksState.ctx.setTransform(1, 0, 0, 1, 0, 0);
+      diwaliFireworksState.ctx.scale(dpr, dpr);
+    }
+  }
+
+  window.addEventListener("resize", resize, { passive: true });
+  resize();
+  return canvas;
+}
+
+// Color palettes for authentic Indian Diwali celebrations
+const DIWALI_PALETTES = [
+  // Royal Gold & Saffron
+  ["#FFD700", "#FFA000", "#FF6F00", "#FFF8E1", "#FFE082"],
+  // Festive Crimson & Rose
+  ["#FF1744", "#F50057", "#FF4081", "#FFD700", "#FFF0F5"],
+  // Emerald & Mint Radiance
+  ["#00E676", "#00B0FF", "#FFD700", "#69F0AE", "#FFFFFF"],
+  // Multi-color Celebration Spark
+  ["#FFD700", "#FF1744", "#00E676", "#D500F9", "#FF9100", "#FFFFFF"]
+];
+
+class DiwaliRocket {
+  constructor(startX, startY, targetX, targetY, colorPalette) {
+    this.x = startX;
+    this.y = startY;
+    this.targetX = targetX;
+    this.targetY = targetY;
+    this.colorPalette = colorPalette;
+
+    const dx = targetX - startX;
+    const dy = targetY - startY;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    const speed = Math.min(dist / 22, 14);
+    this.vx = (dx / dist) * speed;
+    this.vy = (dy / dist) * speed;
+
+    this.trail = [];
+    this.trailLength = 5;
+    this.exploded = false;
+  }
+
+  update() {
+    this.trail.push({ x: this.x, y: this.y });
+    if (this.trail.length > this.trailLength) {
+      this.trail.shift();
+    }
+
+    this.x += this.vx;
+    this.y += this.vy;
+
+    // Check if reached apex target
+    if (this.vy < 0 && this.y <= this.targetY) {
+      this.exploded = true;
+    }
+  }
+
+  draw(ctx) {
+    if (this.trail.length < 2) return;
+    ctx.save();
+    ctx.beginPath();
+    ctx.moveTo(this.trail[0].x, this.trail[0].y);
+    for (let i = 1; i < this.trail.length; i++) {
+      ctx.lineTo(this.trail[i].x, this.trail[i].y);
+    }
+    ctx.strokeStyle = "#FFE082";
+    ctx.lineWidth = 2.2;
+    ctx.lineCap = "round";
+    ctx.stroke();
+
+    // Glowing rocket head
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, 2.5, 0, Math.PI * 2);
+    ctx.fillStyle = "#FFFFFF";
+    ctx.shadowColor = "#FFD700";
+    ctx.shadowBlur = 8;
+    ctx.fill();
+    ctx.restore();
+  }
+}
+
+class DiwaliParticle {
+  constructor(x, y, color, isWillow = false) {
+    this.x = x;
+    this.y = y;
+    this.color = color;
+    this.isWillow = isWillow;
+
+    const angle = Math.random() * Math.PI * 2;
+    const speed = isWillow ? (Math.random() * 2.5 + 1.2) : (Math.random() * 4.8 + 1.8);
+    this.vx = Math.cos(angle) * speed;
+    this.vy = Math.sin(angle) * speed;
+
+    this.alpha = 1;
+    this.decay = isWillow ? (Math.random() * 0.012 + 0.008) : (Math.random() * 0.018 + 0.014);
+    this.gravity = isWillow ? 0.04 : 0.055;
+    this.friction = 0.965;
+    this.radius = isWillow ? (Math.random() * 2 + 1.2) : (Math.random() * 2.4 + 1.6);
+    this.twinkleSpeed = Math.random() * 0.2 + 0.1;
+    this.flicker = Math.random() * Math.PI;
+  }
+
+  update() {
+    this.vx *= this.friction;
+    this.vy *= this.friction;
+    this.vy += this.gravity;
+    this.x += this.vx;
+    this.y += this.vy;
+    this.alpha -= this.decay;
+    this.flicker += this.twinkleSpeed;
+  }
+
+  draw(ctx) {
+    if (this.alpha <= 0) return;
+    ctx.save();
+    const currentAlpha = Math.max(0, Math.min(1, this.alpha * (0.75 + Math.sin(this.flicker) * 0.25)));
+    ctx.globalAlpha = currentAlpha;
+    ctx.fillStyle = this.color;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+  }
+}
+
+function spawnDiwaliBurst(x, y, palette) {
+  const isMobile = window.innerWidth < 768;
+  const count = isMobile ? 38 : 65;
+  const isWillow = Math.random() < 0.35;
+  const chosenPalette = palette || DIWALI_PALETTES[Math.floor(Math.random() * DIWALI_PALETTES.length)];
+
+  for (let i = 0; i < count; i++) {
+    const color = chosenPalette[Math.floor(Math.random() * chosenPalette.length)];
+    diwaliFireworksState.particles.push(new DiwaliParticle(x, y, color, isWillow));
+  }
+}
+
+function launchDiwaliRocket(startX, targetX, targetY) {
+  const palette = DIWALI_PALETTES[Math.floor(Math.random() * DIWALI_PALETTES.length)];
+  const h = diwaliFireworksState.height || window.innerHeight;
+  const rocket = new DiwaliRocket(startX, h + 10, targetX, targetY, palette);
+  diwaliFireworksState.rockets.push(rocket);
+}
+
+function runDiwaliFireworksLoop() {
+  const { ctx, width, height } = diwaliFireworksState;
+  if (!ctx) return;
+
+  ctx.clearRect(0, 0, width, height);
+
+  // Update & Draw Rockets
+  for (let i = diwaliFireworksState.rockets.length - 1; i >= 0; i--) {
+    const rocket = diwaliFireworksState.rockets[i];
+    rocket.update();
+    rocket.draw(ctx);
+    if (rocket.exploded) {
+      spawnDiwaliBurst(rocket.x, rocket.y, rocket.colorPalette);
+      diwaliFireworksState.rockets.splice(i, 1);
+    }
+  }
+
+  // Update & Draw Particles
+  for (let i = diwaliFireworksState.particles.length - 1; i >= 0; i--) {
+    const p = diwaliFireworksState.particles[i];
+    p.update();
+    p.draw(ctx);
+    if (p.alpha <= 0) {
+      diwaliFireworksState.particles.splice(i, 1);
+    }
+  }
+
+  // Stop loop cleanly when all rockets and particles are cleared
+  if (diwaliFireworksState.rockets.length === 0 && diwaliFireworksState.particles.length === 0) {
+    diwaliFireworksState.isRunning = false;
+    if (diwaliFireworksState.animId) {
+      cancelAnimationFrame(diwaliFireworksState.animId);
+      diwaliFireworksState.animId = null;
+    }
+    ctx.clearRect(0, 0, width, height);
+    return;
+  }
+
+  diwaliFireworksState.animId = requestAnimationFrame(runDiwaliFireworksLoop);
+}
+
+function triggerDiwaliFireworks(manual = false) {
+  // Respect reduced motion accessibility preference unless explicitly clicked
+  if (!manual && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  if (!diwaliFireworksState.canvas) {
+    initDiwaliFireworksCanvas();
+  }
+  if (!diwaliFireworksState.canvas) return;
+
+  const w = diwaliFireworksState.width || window.innerWidth;
+  const h = diwaliFireworksState.height || window.innerHeight;
+
+  // Barrage sequence
+  const bursts = manual ? [
+    { delay: 0,   sx: w * 0.35, tx: w * 0.35, ty: h * 0.28 },
+    { delay: 200, sx: w * 0.65, tx: w * 0.65, ty: h * 0.24 },
+    { delay: 500, sx: w * 0.50, tx: w * 0.50, ty: h * 0.32 },
+    { delay: 850, sx: w * 0.25, tx: w * 0.28, ty: h * 0.22 },
+    { delay: 1100, sx: w * 0.75, tx: w * 0.72, ty: h * 0.25 }
+  ] : [
+    { delay: 0,    sx: w * 0.30, tx: w * 0.32, ty: h * 0.26 },
+    { delay: 350,  sx: w * 0.70, tx: w * 0.68, ty: h * 0.23 },
+    { delay: 750,  sx: w * 0.50, tx: w * 0.50, ty: h * 0.33 },
+    { delay: 1200, sx: w * 0.20, tx: w * 0.24, ty: h * 0.22 },
+    { delay: 1550, sx: w * 0.80, tx: w * 0.76, ty: h * 0.25 },
+    { delay: 2100, sx: w * 0.40, tx: w * 0.42, ty: h * 0.20 },
+    { delay: 2400, sx: w * 0.60, tx: w * 0.58, ty: h * 0.22 },
+    { delay: 3000, sx: w * 0.50, tx: w * 0.50, ty: h * 0.18 }
+  ];
+
+  bursts.forEach(b => {
+    setTimeout(() => {
+      launchDiwaliRocket(b.sx, b.tx, b.ty);
+      if (!diwaliFireworksState.isRunning) {
+        diwaliFireworksState.isRunning = true;
+        diwaliFireworksState.animId = requestAnimationFrame(runDiwaliFireworksLoop);
+      }
+    }, b.delay);
+  });
+}
+
+/**
+ * ============================================================================
+ * DYNAMIC HERO TITLE ROTATOR / TYPEWRITER EFFECT
+ * Cycles through brand headline titles automatically:
+ * 1. Little Details. Handmade With Heart.
+ * 2. Little Things. Tells a Story.
+ * 3. Personalized Gifts. Made With Love.
+ * 4. Heirloom Crafts. Cherished Forever.
+ * ============================================================================
+ */
+function initHeroTitleRotator() {
+  const container = document.getElementById("hero-typed-text");
+  if (!container) return;
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  const titles = [
+    { prefix: "Little Details. ", highlight: "Handmade With Heart." },
+    { prefix: "Little Things. ", highlight: "Tells a Story." },
+    { prefix: "Personalized Gifts. ", highlight: "Made With Love." },
+    { prefix: "Heirloom Crafts. ", highlight: "Cherished Forever." }
+  ];
+
+  let titleIndex = 0;
+  let charIndex = titles[0].prefix.length + titles[0].highlight.length;
+  let isDeleting = true;
+
+  function renderCurrent(prefix, highlight, count) {
+    const pLen = prefix.length;
+    if (count <= pLen) {
+      container.innerHTML = prefix.substring(0, count);
+    } else {
+      const hCount = count - pLen;
+      container.innerHTML = `${prefix}<em>${highlight.substring(0, hCount)}</em>`;
+    }
+  }
+
+  function step() {
+    const current = titles[titleIndex];
+    const totalLen = current.prefix.length + current.highlight.length;
+
+    if (isDeleting) {
+      charIndex--;
+      renderCurrent(current.prefix, current.highlight, charIndex);
+
+      if (charIndex <= 0) {
+        isDeleting = false;
+        titleIndex = (titleIndex + 1) % titles.length;
+        setTimeout(step, 400);
+        return;
+      }
+      setTimeout(step, 28);
+    } else {
+      charIndex++;
+      renderCurrent(current.prefix, current.highlight, charIndex);
+
+      if (charIndex >= totalLen) {
+        isDeleting = true;
+        setTimeout(step, 2600); // Display time before next cycle
+        return;
+      }
+      setTimeout(step, 65);
+    }
+  }
+
+  // Start the first deletion transition after initial 2.8s
+  setTimeout(step, 2800);
 }
 
 /**
@@ -1242,12 +1631,14 @@ function closeDesignStudio() {
  * INITIALIZATION ON DOM LOAD
  * ============================================================================
  */
-document.addEventListener("DOMContentLoaded", () => {
+function initApp() {
   initIntroAnimation();
+  initDiwaliFireworksCanvas();
   initThemeSystem();
   initCart();
   renderCatalog();
   initFaqAccordion();
+  initHeroTitleRotator();
 
   // Category filter tabs
   document.querySelectorAll(".filter-tab").forEach(tab => {
@@ -1292,6 +1683,7 @@ document.addEventListener("DOMContentLoaded", () => {
       closePolicyModal();
       closeDesignStudio();
       closeMobileMenu();
+      if (typeof closeGSheetSetupModal === "function") closeGSheetSetupModal();
     }
   });
 
@@ -1302,7 +1694,8 @@ document.addEventListener("DOMContentLoaded", () => {
     { id: "order-modal-backdrop", closeFn: closeOrderModal },
     { id: "policy-modal-backdrop", closeFn: closePolicyModal },
     { id: "design-studio-modal", closeFn: closeDesignStudio },
-    { id: "mobile-menu-drawer", closeFn: closeMobileMenu }
+    { id: "mobile-menu-drawer", closeFn: closeMobileMenu },
+    { id: "gsheet-setup-modal", closeFn: () => { if (typeof closeGSheetSetupModal === "function") closeGSheetSetupModal(); } }
   ].forEach(({ id, closeFn }) => {
     const el = document.getElementById(id);
     if (el) {
@@ -1311,4 +1704,11 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
-});
+}
+
+// Ensure initApp runs whether DOM is still loading or already parsed
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initApp);
+} else {
+  initApp();
+}
